@@ -18,10 +18,30 @@
   border-radius: 2px;
 }
 
-.example .background {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  background-image: url('../images/demo.jpg');
+body {
+  background-image: url('../images/flags.jpg');
   background-size: cover;
-  background-position: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+input {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.container {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5));
+  max-width: 600px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.country-container {
+  display: flex;
+  justify-content: space-between;
 }
