@@ -1,9 +1,10 @@
 export default function fetchCountries(searchQuery) {
   return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`)
     .then(r => {
-      return r.json();
+      if (r.ok) return r.json();
+      throw new Error('Error fetching data');
     })
     .catch(error => {
-      console.log('Error', error);
+      console.error('Error', error);
     });
 }

@@ -1,10 +1,10 @@
 import './sass/main.scss';
 
 const debounce = require('lodash.debounce');
-import fetchCountries from '../js/fetchCountries';
-import countryTpl from '../templates/country';
-import countriesListTpl from '../templates/countries-list';
-import { renderer } from '../js/renderer';
+import fetchCountries from '../js/fetchCountries.js';
+import countryTpl from '../templates/country.hbs';
+import countriesListTpl from '../templates/countries-list.hbs';
+import { renderer } from '../js/renderer.js';
 
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
