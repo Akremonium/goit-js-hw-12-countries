@@ -20,12 +20,13 @@ const refs = {
 refs.input.addEventListener('input', debounce(onInput, 500));
 
 function onInput() {
-  let searchQuery = refs.input.value;
+  let searchQuery = refs.input.value.trim();
   refs.resultContainer.innerHTML = '';
-  if (refs.input.value !== '') {
+  if (searchQuery !== '') {
     fetchCountries(searchQuery).then(data => {
       if (data.length === 1) {
         renderer(data, countryTpl);
+        refs.input.value = '';
       } else if (data.length >= 2 && data.length <= 10) {
         renderer(data, countriesListTpl);
       } else if (data.length > 10) {
